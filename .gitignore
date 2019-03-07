@@ -17,3 +17,10 @@ NEG Engine/bin/Debug/NEG Engine.exe
 .vs/NEG Engine/v15/.suo
 .vs/NEG Engine/v15/.suo
 *.cache
+*.exe
+.vs/NEG Engine/v15/.suo
+*.pdb
+*.exe
+*.cache
+*.cache
+NEG Engine/obj/Debug/NEG Engine.csproj.FileListAbsolute.txt

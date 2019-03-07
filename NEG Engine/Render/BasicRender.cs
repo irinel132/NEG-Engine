@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace NEG_Engine.Render
 {
-    class BasicRender : IRender
+    class BasicRender : IRender, IDisposable
     {
         // Internal Variables
         protected Form      _form           = null;
@@ -27,6 +26,15 @@ namespace NEG_Engine.Render
             
             _nextFrame = new Bitmap(Resolution.X, Resolution.Y);    // Create a new Bitmap the size of the resolution
             _nextFrameGraphics = Graphics.FromImage(_nextFrame);    // Create a graphics for that bitmap
+        }
+
+        public void Dispose()
+        {
+            // Free up space
+            _form = null;
+            _formGraphics.Dispose();
+            _nextFrame.Dispose();
+            _nextFrameGraphics.Dispose();
         }
 
         // Methods

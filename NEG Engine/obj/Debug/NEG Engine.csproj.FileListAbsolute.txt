@@ -8,9 +8,11 @@ C:\Users\irine\Desktop\NEG Engine\NEG Engine\obj\Debug\NEG Engine.exe
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\obj\Debug\NEG Engine.pdb
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\NEG Engine.exe
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\NEG Engine.pdb
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csprojAssemblyReference.cache
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG_Engine.Properties.Resources.resources
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csproj.GenerateResource.cache
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csproj.CoreCompileInputs.cache
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.exe
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.pdb
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\NEG Engine.exe.CodeAnalysisLog.xml
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\NEG Engine.exe.lastcodeanalysissucceeded
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csprojAssemblyReference.cache

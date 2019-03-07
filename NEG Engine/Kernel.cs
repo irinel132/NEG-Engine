@@ -19,13 +19,6 @@ namespace NEG_Engine
         protected Form              _gameWindow = null;         // The window of the game. Used for drawing
         protected IGameThread       _gameThread = null;         // The game thread
         protected IRender           _gameRender = null;         // The game render
-        
-
-        // The thread that keeps the game running
-        static void GameThread (Kernel Kernel)
-        {
-                        
-        }
 
         // Constructor
         public Kernel (Form F)
@@ -44,6 +37,8 @@ namespace NEG_Engine
         {
             _gameRender = new BasicRender(_gameWindow, new Point(800, 600));
         }
+
+
         public void Tick (long Ticks)
         {
 
