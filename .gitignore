@@ -7,3 +7,9 @@
 NEG Engine/bin/Debug/NEG Engine.exe
 NEG Engine/obj/Debug/NEG Engine.exe
 NEG Engine/obj/Debug/NEG Engine.pdb
+*.pdb
+*.exe
+*.cache
+*.cache
+NEG Engine/bin/Debug/NEG Engine.pdb
+NEG Engine/bin/Debug/NEG Engine.exe
