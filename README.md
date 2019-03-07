@@ -2,8 +2,8 @@
 
 
 TODO:
-  - Interfaces **Hamish**
+  - Interfaces **>>Hamish**
   - **BMP Loader**
-  - Sound Player **Nel**
+  - Sound Player **>>Nel**
   - Sound Loader
   
