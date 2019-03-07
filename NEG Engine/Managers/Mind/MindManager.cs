@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NEG_Engine.Managers
-{
-    class Manager : IManager
-    {
+namespace NEG_Engine.Managers.Mind
 
+{
+    class MindManager : IMindManager
+
+    {
         public void Start()
         {
 
@@ -43,6 +44,4 @@ namespace NEG_Engine.Managers
             throw new NotImplementedException();
         }
     }
-
-    
 }
