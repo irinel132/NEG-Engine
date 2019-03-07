@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NEG_Engine.Managers
+namespace NEG_Engine.Managers.Collision
 {
-    class Manager : IManager
+    class CollisionManager : ICollisionManager
     {
-
         public void Start()
         {
 
@@ -43,6 +42,4 @@ namespace NEG_Engine.Managers
             throw new NotImplementedException();
         }
     }
-
-    
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace NEG_Engine.Managers
+namespace NEG_Engine.Hitbox
 {
     interface IHitbox
     {
