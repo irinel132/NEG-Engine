@@ -13,3 +13,7 @@ NEG Engine/obj/Debug/NEG Engine.pdb
 *.cache
 NEG Engine/bin/Debug/NEG Engine.pdb
 NEG Engine/bin/Debug/NEG Engine.exe
+*.cache
+.vs/NEG Engine/v15/.suo
+.vs/NEG Engine/v15/.suo
+*.cache
