@@ -7,6 +7,7 @@ using System.Threading;
 
 using NEG_Engine.GThread;
 using NEG_Engine.Render;
+using System.Drawing;
 
 namespace NEG_Engine
 {
@@ -41,11 +42,11 @@ namespace NEG_Engine
         // Methods
         protected void Setup()
         {
-            _gameRender = new BasicRender(_gameWindow);
+            _gameRender = new BasicRender(_gameWindow, new Point(800, 600));
         }
         public void Tick (long Ticks)
         {
-            
+
         }
 
 

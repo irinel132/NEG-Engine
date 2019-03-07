@@ -12,20 +12,39 @@ namespace NEG_Engine.Render
     class BasicRender : IRender
     {
         // Internal Variables
-        protected Graphics  _graphics   = null;
-        protected Form      _form       = null;
+        protected Form      _form           = null;
+        protected Graphics  _formGraphics   = null;        
+
+        protected Bitmap    _nextFrame          = null;
+        protected Graphics  _nextFrameGraphics  = null;
         // Constructor
 
-        public BasicRender (Form Form)
+        public BasicRender (Form Form, Point Resolution)
         {
-            _form       = Form;                     // Assign the form to a variable
-            _graphics   = Form.CreateGraphics();    // Get the graphics from the form and assign it to a variable
+            _form           = Form;                     // Assign the form to a variable
+            _formGraphics   = Form.CreateGraphics();    // Get the graphics from the form and assign it to a variable
+
+            
+            _nextFrame = new Bitmap(Resolution.X, Resolution.Y);    // Create a new Bitmap the size of the resolution
+            _nextFrameGraphics = Graphics.FromImage(_nextFrame);    // Create a graphics for that bitmap
         }
 
         // Methods
         public void DrawBitmap(Bitmap BMP, Point Position)
         {
-            _graphics.DrawImage(BMP, Position);
+            _nextFrameGraphics.DrawImage(BMP, Position);
+        }
+
+        public void DrawBitmap(Bitmap BMP, int X, int Y)
+        {
+            _nextFrameGraphics.DrawImage(BMP, X, Y);
+        }
+
+        public void NextFrame()
+        {           
+            _formGraphics.DrawImage(_nextFrame, 0, 0);
+
+            _nextFrameGraphics.Clear(Color.Orange);
         }
     }
 }
