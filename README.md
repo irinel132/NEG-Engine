@@ -3,4 +3,7 @@
 
 TODO:
   - Interfaces **Hamish**
-  - BMP Loader **Nel**
+  - **BMP Loader**
+  - Sound Player **Nel**
+  - Sound Loader
+  
