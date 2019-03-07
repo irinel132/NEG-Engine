@@ -16,3 +16,4 @@ C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csprojAssemblyReference.cache
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\Dick.bmp
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\hearth.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Wavs\piano2.wav

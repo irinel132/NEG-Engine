@@ -9,6 +9,7 @@ using NEG_Engine.GThread;
 using NEG_Engine.Render;
 using System.Drawing;
 using NEG_Engine.Loader.Sprite;
+using NEG_Engine.WavPlayer;
 
 namespace NEG_Engine
 {
@@ -21,7 +22,8 @@ namespace NEG_Engine
         protected IGameThread       _gameThread = null;         // The game thread
         protected IRender           _gameRender = null;         // The game render
 
-        protected ISpriteLoader     _spriteLoader = null;
+        protected ISpriteLoader     _spriteLoader   = null;     // The sprite loader
+        protected IWavPlayer        _soundPlayer    = null;     // The sound player
 
         // Constructor
         public Kernel (Form F)
@@ -34,7 +36,7 @@ namespace NEG_Engine
             _gameThread.Start();                // Start the thread
         }
         
-
+        
         // Methods
         protected void Setup()
         {
@@ -44,6 +46,11 @@ namespace NEG_Engine
             // Initialize and start the Sprite Loader
             _spriteLoader = new SpriteLoader();
             _spriteLoader.LoadImages();
+
+            // DEBUG
+            _soundPlayer = new BasicWavPlayer();
+
+            _soundPlayer.PlaySound(new System.Media.SoundPlayer("Wavs/piano2.wav"));
         }
 
 
