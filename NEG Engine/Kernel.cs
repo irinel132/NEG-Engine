@@ -13,8 +13,8 @@ namespace NEG_Engine
         // Public Variables
         public bool     _gameRunning = true;                    // If set to false, the thread will stop running
         // Internal Variables
-        protected Form              _gameWindow = null;
-        protected IGameThread       _gameThread = null;
+        protected Form              _gameWindow = null;         // The window of the game. Used for drawing
+        protected IGameThread       _gameThread = null;         // The game thread
 
         // The thread that keeps the game running
         static void GameThread (Kernel Kernel)
@@ -25,7 +25,7 @@ namespace NEG_Engine
         // Constructor
         public Kernel (Form F)
         {
-            this._gameWindow = F;       // Assign the game window wo the proper variable
+            this._gameWindow = F;               // Assign the game window wo the proper variable
 
             _gameThread = new GameThread(this); // Instantiante our GameThread. It will call upong Tick at GameThread.TICKS_PER_SECOND (default 60 ) ticks per seconds
             _gameThread.Start();                // Start the thread

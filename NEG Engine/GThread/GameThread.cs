@@ -26,7 +26,7 @@ namespace NEG_Engine.GThread
         // Constructor
         public GameThread (Kernel Kernel)
         {
-            _kernel = Kernel;   // Assign the kernel to the local variable
+            _kernel = Kernel;                   // Assign the kernel to the local variable
             _thread = new Thread(ThreadRun);    // Create the thread and tell it what to run
         }
 
