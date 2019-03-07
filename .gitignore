@@ -3,3 +3,7 @@
 *.ide-shm
 *.ide-wal
 *.ide
+*.pdb
+NEG Engine/bin/Debug/NEG Engine.exe
+NEG Engine/obj/Debug/NEG Engine.exe
+NEG Engine/obj/Debug/NEG Engine.pdb
