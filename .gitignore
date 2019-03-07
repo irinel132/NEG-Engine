@@ -1,26 +1,11 @@
-
 *.lock
 *.ide-shm
 *.ide-wal
 *.ide
 *.pdb
-NEG Engine/bin/Debug/NEG Engine.exe
-NEG Engine/obj/Debug/NEG Engine.exe
-NEG Engine/obj/Debug/NEG Engine.pdb
-*.pdb
-*.exe
-*.cache
-*.cache
-NEG Engine/bin/Debug/NEG Engine.pdb
-NEG Engine/bin/Debug/NEG Engine.exe
-*.cache
-.vs/NEG Engine/v15/.suo
-.vs/NEG Engine/v15/.suo
+*.suo
 *.cache
 *.exe
-.vs/NEG Engine/v15/.suo
-*.pdb
 *.exe
-*.cache
 *.cache
 NEG Engine/obj/Debug/NEG Engine.csproj.FileListAbsolute.txt
