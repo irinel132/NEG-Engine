@@ -2,11 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
+using System.Threading;
 
+using NEG_Engine.GThread;
 namespace NEG_Engine
 {
     class Kernel
-    {
+    {        
+        // Public Variables
+        public bool     _gameRunning = true;                    // If set to false, the thread will stop running
+        // Internal Variables
+        protected Form              _gameWindow = null;
+        protected IGameThread       _gameThread = null;
+
+        // The thread that keeps the game running
+        static void GameThread (Kernel Kernel)
+        {
+            
+        }
+
+        // Constructor
+        public Kernel (Form F)
+        {
+            this._gameWindow = F;       // Assign the game window wo the proper variable
+
+            _gameThread = new GameThread(this); // Instantiante our GameThread. It will call upong Tick at GameThread.TICKS_PER_SECOND (default 60 ) ticks per seconds
+            _gameThread.Start();                // Start the thread
+        }
+
+
+        // Methods
+        public void Tick (long Ticks)
+        {
+            //Console.WriteLine(Ticks.ToString()); // Tick debug
+        }
+
 
     }
 }
