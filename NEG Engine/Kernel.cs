@@ -38,19 +38,18 @@ namespace NEG_Engine
         // Methods
         protected void Setup()
         {
+            // Choose the game Window size
             _gameRender = new BasicRender(_gameWindow, new Point(800, 600));
 
+            // Initialize and start the Sprite Loader
             _spriteLoader = new SpriteLoader();
-
             _spriteLoader.LoadImages();
         }
 
 
         public void Tick (long Ticks)
         {
-            _gameRender.NextFrame();
 
-            _gameRender.DrawBitmap(_spriteLoader.GetBitmap(1), (int) Ticks, (int) Ticks);
         }
 
 

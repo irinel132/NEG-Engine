@@ -12,11 +12,15 @@ namespace NEG_Engine.Loader.Sprite
     {
         // Internal Variables
         protected List<Bitmap>     _bitmapArray = null;
+
+
         // Constructors
         public SpriteLoader ()
         {
             _bitmapArray = new List<Bitmap>();
         }
+
+
         // Methods
 
             // Will empty any memory in use
@@ -25,11 +29,7 @@ namespace NEG_Engine.Loader.Sprite
             _bitmapArray = null;
         }
 
-        public Bitmap GetBitmap(string Name)
-        {
-            throw new NotImplementedException();
-        }
-
+        // Return the bitmap using hte provided Index
         public Bitmap GetBitmap(int Index)
         {
             return _bitmapArray[Index];
