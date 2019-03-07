@@ -6,7 +6,7 @@ using System.Text;
 namespace NEG_Engine.Managers.Mind
 
 {
-    class MindManager : IMindManager
+    class MindManager : IMindManager, IManager
 
     {
         public void Start()

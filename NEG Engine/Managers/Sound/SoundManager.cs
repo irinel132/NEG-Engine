@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NEG_Engine.Managers.Sound
 {
-    class SoundManager : ISoundManager
+    class SoundManager : ISoundManager, IManager
     {
         public void Start()
         {

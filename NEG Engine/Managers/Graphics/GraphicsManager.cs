@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NEG_Engine.Managers.Graphics
 {
-    class GraphicsManager : IGraphicsManager
+    class GraphicsManager : IGraphicsManager, IManager
     {
         public void Start()
         {
