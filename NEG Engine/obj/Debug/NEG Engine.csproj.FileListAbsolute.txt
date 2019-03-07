@@ -13,6 +13,6 @@ C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csproj.CoreCompileInputs.cache
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.exe
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.pdb
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\NEG Engine.exe.CodeAnalysisLog.xml
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\NEG Engine.exe.lastcodeanalysissucceeded
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csprojAssemblyReference.cache
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\Dick.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\hearth.bmp

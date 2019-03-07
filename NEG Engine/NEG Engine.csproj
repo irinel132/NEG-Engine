@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hitbox\Hitbox.cs" />
+    <Compile Include="Hitbox\IHitbox.cs" />
+    <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
+    <Compile Include="Loader\Sprite\SpriteLoader.cs" />
+    <Compile Include="Managers\IManager.cs" />
+    <Compile Include="Managers\Manager.cs" />
     <Compile Include="Render\BasicRender.cs" />
     <Compile Include="Render\IRender.cs" />
     <Compile Include="GThread\GameThread.cs" />
@@ -51,6 +57,10 @@
     <Compile Include="Kernel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprite\ISprite.cs" />
+    <Compile Include="Sprite\Shape\IShape.cs" />
+    <Compile Include="Sprite\Shape\Shape.cs" />
+    <Compile Include="Sprite\Sprite.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,8 +80,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Bitmaps\" />
+    <Content Include="Bitmaps\Dick.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Bitmaps\hearth.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,6 +8,7 @@ using System.Threading;
 using NEG_Engine.GThread;
 using NEG_Engine.Render;
 using System.Drawing;
+using NEG_Engine.Loader.Sprite;
 
 namespace NEG_Engine
 {
@@ -19,6 +20,8 @@ namespace NEG_Engine
         protected Form              _gameWindow = null;         // The window of the game. Used for drawing
         protected IGameThread       _gameThread = null;         // The game thread
         protected IRender           _gameRender = null;         // The game render
+
+        protected ISpriteLoader     _spriteLoader = null;
 
         // Constructor
         public Kernel (Form F)
@@ -36,12 +39,18 @@ namespace NEG_Engine
         protected void Setup()
         {
             _gameRender = new BasicRender(_gameWindow, new Point(800, 600));
+
+            _spriteLoader = new SpriteLoader();
+
+            _spriteLoader.LoadImages();
         }
 
 
         public void Tick (long Ticks)
         {
+            _gameRender.NextFrame();
 
+            _gameRender.DrawBitmap(_spriteLoader.GetBitmap(1), (int) Ticks, (int) Ticks);
         }
 
 
