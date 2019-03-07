@@ -8,43 +8,19 @@ using System.IO;
 
 namespace NEG_Engine.Loader.Sprite
 {
-    class SpriteLoader : ISpriteLoader, IDisposable
+    class SpriteLoader : FileLoader<Bitmap>, ISpriteLoader, IFileLoader
     {
-        // Internal Variables
-        protected List<Bitmap>     _bitmapArray = null;
-
-
-        // Constructors
-        public SpriteLoader ()
-        {
-            _bitmapArray = new List<Bitmap>();
-        }
-
-
-        // Methods
-
-            // Will empty any memory in use
-        public void Dispose()
-        {
-            _bitmapArray = null;
-        }
-
-        // Return the bitmap using hte provided Index
+        // Returns a bitmap using the provided Index
         public Bitmap GetBitmap(int Index)
         {
-            return _bitmapArray[Index];
+            return _loadedFiles[Index];
         }
 
-        // Loads all the images from the Bitmaps folder
-        public void LoadImages()
+        // Loads the file with the path provided into _loadedFiles
+        public override void LoadFile(string path)
         {
-            
-            foreach (string path in Directory.EnumerateFiles("Bitmaps/", "*.bmp"))
-            {
-                Console.WriteLine(path);
-
-                _bitmapArray.Add(new Bitmap(path));
-            }
+            this._loadedFiles.Add(new Bitmap(path));
         }
     }
 }
+

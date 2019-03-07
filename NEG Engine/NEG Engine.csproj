@@ -46,8 +46,12 @@
   <ItemGroup>
     <Compile Include="Hitbox\Hitbox.cs" />
     <Compile Include="Hitbox\IHitbox.cs" />
+    <Compile Include="Loader\FileLoader.cs" />
+    <Compile Include="Loader\IFileLoader.cs" />
     <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
     <Compile Include="Loader\Sprite\SpriteLoader.cs" />
+    <Compile Include="Loader\Wav\IWavLoader.cs" />
+    <Compile Include="Loader\Wav\WavLoader.cs" />
     <Compile Include="Managers\Collision\CollisionManager.cs" />
     <Compile Include="Managers\Collision\ICollisionManager.cs" />
     <Compile Include="Managers\Entity\EntityManager.cs" />

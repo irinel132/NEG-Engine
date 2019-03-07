@@ -10,6 +10,7 @@ using NEG_Engine.Render;
 using System.Drawing;
 using NEG_Engine.Loader.Sprite;
 using NEG_Engine.WavPlayer;
+using NEG_Engine.Loader.Wav;
 
 namespace NEG_Engine
 {
@@ -20,10 +21,12 @@ namespace NEG_Engine
         // Internal Variables
         protected Form              _gameWindow = null;         // The window of the game. Used for drawing
         protected IGameThread       _gameThread = null;         // The game thread
-        protected IRender           _gameRender = null;         // The game render
 
-        protected ISpriteLoader     _spriteLoader   = null;     // The sprite loader
-        protected IWavPlayer        _soundPlayer    = null;     // The sound player
+        // DEBUG STUFF
+        // TODO Move them to proper classes, to decluter Kernel
+        protected IRender           _gameRender     = null;     // The game render
+        protected ISpriteLoader     _spriteLoader   = null;     // The sprite loader        
+        protected IWavLoader        _wavLoader      = null;     // THe sound loader
 
         // Constructor
         public Kernel (Form F)
@@ -43,19 +46,21 @@ namespace NEG_Engine
             // Choose the game Window size
             _gameRender = new BasicRender(_gameWindow, new Point(800, 600));
 
-            // Initialize and start the Sprite Loader
-            _spriteLoader = new SpriteLoader();
-            _spriteLoader.LoadImages();
-
             // DEBUG
-            _soundPlayer = new BasicWavPlayer();
+            // Initialize and start the Sprite Loader
+            _spriteLoader   = new SpriteLoader();
+            _wavLoader      = new WavLoader();
 
-            _soundPlayer.PlaySound(new System.Media.SoundPlayer("Wavs/piano2.wav"));
+            ((Loader.IFileLoader) _spriteLoader).LoadFilesFromFolder("Bitmaps/", "*.bmp");
+            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
+
+            _wavLoader.GetWav(0).Play();
+
         }
 
 
         public void Tick (long Ticks)
-        {
+        {            
 
         }
 

@@ -7,9 +7,7 @@ using System.Drawing;
 namespace NEG_Engine.Loader.Sprite
 {
     interface ISpriteLoader
-    {
-        void    LoadImages      ();                 // Loads all the images
-
+    {        
         Bitmap  GetBitmap       (int Index);        // Returns the sprite, by index
     }
 }
