@@ -9,3 +9,6 @@
 *.exe
 *.cache
 NEG Engine/obj/Debug/NEG Engine.csproj.FileListAbsolute.txt
+.vs/NEG Engine/v15/.suo
+NEG Engine/obj/Debug/NEG Engine.csproj.CoreCompileInputs.cache
+NEG Engine/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NEG_Engine.Managers.Collision
 {
-    class CollisionManager : ICollisionManager
+    class CollisionManager : ICollisionManager, IManager
     {
         public void Start()
         {

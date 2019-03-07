@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NEG_Engine.Managers.Entity
 {
-    class EntityManager : IEntityManager
+    class EntityManager : IEntityManager, IManager
     {
         public void Start()
         {
