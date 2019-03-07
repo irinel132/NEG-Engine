@@ -17,18 +17,19 @@ namespace NEG_Engine
         public bool     _gameRunning = true;                    // If set to false, the thread will stop running
         // Internal Variables
         protected Form      _gameWindow = null;
+        protected Thread    _gameThread = null;
 
         // The thread that keeps the game running
-        protected void GameThread ()
+        static void GameThread (Kernel Kernel)
         {
             // While the game is running
-            while (this._gameRunning)
+            while (Kernel._gameRunning)
             {
                 SystemClock = DateTime.Now.Millisecond;             // Get the system time in MS                
                 Ticks++;                                            // Intend the in engine time
                 
 
-                this.Tick(Ticks);
+                Kernel.Tick(Ticks);
 
                 int sleepTime = (1000 / TICKS_PER_SECOND) - (SystemClock - DateTime.Now.Millisecond); // Maths doesn't need comments.
                 Thread.Sleep(sleepTime);
@@ -42,14 +43,23 @@ namespace NEG_Engine
 
 
 
-            GameThread();
+            // Evil lambada. Could possibly do better 
+            // TODO Fix The evil lambada
+            this._gameThread = new Thread(() =>
+            {
+                Console.WriteLine("Threads");
+                GameThread(this);                
+            }
+            );
+
+            this._gameThread.Start();
         }
 
 
         // Methods
         public void Tick (long Ticks)
         {
-            Console.WriteLine("Hello " + Ticks.ToString());
+            
         }
 
 

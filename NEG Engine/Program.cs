@@ -20,12 +20,15 @@ namespace NEG_Engine
             gameWindow.BackColor        = Color.White;
             gameWindow.FormBorderStyle  = FormBorderStyle.None;
             gameWindow.Bounds           = Screen.PrimaryScreen.Bounds;
-            gameWindow.TopMost          = true;
+            gameWindow.TopMost          = false;
 
             Application.EnableVisualStyles();
+            new Kernel(gameWindow);
             Application.Run(gameWindow);
 
+            
 
+            
         }
     }
 }
