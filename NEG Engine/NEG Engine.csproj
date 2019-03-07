@@ -46,10 +46,24 @@
   <ItemGroup>
     <Compile Include="Hitbox\Hitbox.cs" />
     <Compile Include="Hitbox\IHitbox.cs" />
+    <Compile Include="Loader\FileLoader.cs" />
+    <Compile Include="Loader\IFileLoader.cs" />
     <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
     <Compile Include="Loader\Sprite\SpriteLoader.cs" />
+    <Compile Include="Loader\Wav\IWavLoader.cs" />
+    <Compile Include="Loader\Wav\WavLoader.cs" />
+    <Compile Include="Managers\Collision\CollisionManager.cs" />
+    <Compile Include="Managers\Collision\ICollisionManager.cs" />
+    <Compile Include="Managers\Entity\EntityManager.cs" />
+    <Compile Include="Managers\Entity\IEntityManager.cs" />
+    <Compile Include="Managers\Graphics\GraphicsManager.cs" />
+    <Compile Include="Managers\Graphics\IGraphicsManager.cs" />
     <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\Manager.cs" />
+    <Compile Include="Managers\Mind\IMindManager.cs" />
+    <Compile Include="Managers\Mind\MindManager.cs" />
+    <Compile Include="Managers\Sound\ISoundManager.cs" />
+    <Compile Include="Managers\Sound\SoundManager.cs" />
     <Compile Include="Render\BasicRender.cs" />
     <Compile Include="Render\IRender.cs" />
     <Compile Include="GThread\GameThread.cs" />
@@ -61,6 +75,8 @@
     <Compile Include="Sprite\Shape\IShape.cs" />
     <Compile Include="Sprite\Shape\Shape.cs" />
     <Compile Include="Sprite\Sprite.cs" />
+    <Compile Include="WavPlayer\BasicWavPlayer.cs" />
+    <Compile Include="WavPlayer\IWavPlayer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -86,6 +102,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Bitmaps\hearth.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Wavs\piano2.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

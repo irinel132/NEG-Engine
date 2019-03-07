@@ -9,6 +9,8 @@ using NEG_Engine.GThread;
 using NEG_Engine.Render;
 using System.Drawing;
 using NEG_Engine.Loader.Sprite;
+using NEG_Engine.WavPlayer;
+using NEG_Engine.Loader.Wav;
 
 namespace NEG_Engine
 {
@@ -19,9 +21,12 @@ namespace NEG_Engine
         // Internal Variables
         protected Form              _gameWindow = null;         // The window of the game. Used for drawing
         protected IGameThread       _gameThread = null;         // The game thread
-        protected IRender           _gameRender = null;         // The game render
 
-        protected ISpriteLoader     _spriteLoader = null;
+        // DEBUG STUFF
+        // TODO Move them to proper classes, to decluter Kernel
+        protected IRender           _gameRender     = null;     // The game render
+        protected ISpriteLoader     _spriteLoader   = null;     // The sprite loader        
+        protected IWavLoader        _wavLoader      = null;     // THe sound loader
 
         // Constructor
         public Kernel (Form F)
@@ -34,21 +39,28 @@ namespace NEG_Engine
             _gameThread.Start();                // Start the thread
         }
         
-
+        
         // Methods
         protected void Setup()
         {
             // Choose the game Window size
             _gameRender = new BasicRender(_gameWindow, new Point(800, 600));
 
+            // DEBUG
             // Initialize and start the Sprite Loader
-            _spriteLoader = new SpriteLoader();
-            _spriteLoader.LoadImages();
+            _spriteLoader   = new SpriteLoader();
+            _wavLoader      = new WavLoader();
+
+            ((Loader.IFileLoader) _spriteLoader).LoadFilesFromFolder("Bitmaps/", "*.bmp");
+            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
+
+            _wavLoader.GetWav(0).Play();
+
         }
 
 
         public void Tick (long Ticks)
-        {
+        {            
 
         }
 
