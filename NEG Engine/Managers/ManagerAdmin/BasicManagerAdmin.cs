@@ -13,7 +13,7 @@ namespace NEG_Engine.Managers.ManagerAdmin
         // Constructors
         public BasicManagerAdmin ()
         {
-            _managerList = new List<IManager>();    // Instantiate the list
+            _managerList = new List<IManager>();                        // Instantiate the list
         }
 
         // Interface methods
@@ -109,7 +109,7 @@ namespace NEG_Engine.Managers.ManagerAdmin
 
         // Calls the tick method of every manager in list
         public void Tick(long Ticks)
-        {
+        {            
             foreach (IManager manager in _managerList)      // Loop every IManager
             {
                 manager.Tick(Ticks);                        // Call the tick method
