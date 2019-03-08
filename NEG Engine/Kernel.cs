@@ -52,9 +52,7 @@ namespace NEG_Engine
             _wavLoader      = new WavLoader();
 
             ((Loader.IFileLoader) _spriteLoader).LoadFilesFromFolder("Bitmaps/", "*.bmp");
-            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
-
-            _wavLoader.GetWav(0).Play();
+            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");           
 
         }
 
