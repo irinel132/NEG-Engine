@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using NEG_Engine.Loader.Sprite;
+using NEG_Engine.Managers.Graphics.Camera;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Render;
 using NEG_Engine.Sprites;
@@ -20,12 +21,17 @@ namespace NEG_Engine.Managers.Graphics
         protected   List<ISprite>       _renderList         = null;         // The list of sprites to be rendered
         protected   IRender             _videoRender        = null;         // The actual video renderer
         protected   ISpriteLoader       _spriteLoader       = null;         // The sprite loader
+        protected   ICamera             _camera             = null;         // The game camera
+
+        protected   Point               _resolution;                        // The render resolution
         
         // Constructor
         public GraphicsManager(Form Form, Point Resolution)
         {
-            _videoRender = new BasicRender  (Form, Resolution);
+            _resolution     = Resolution;                           // Save the resolution
+            _videoRender    = new BasicRender  (Form, Resolution);  // Initialize the Video Renderer
         }
+
         
         // Interface Methods
         public IRender VideoRender
@@ -38,6 +44,12 @@ namespace NEG_Engine.Managers.Graphics
         {
             get { return _spriteLoader;     }
             set { _spriteLoader = value;    }
+        }
+
+        public Point RenderResolution
+        {
+            get { return _resolution;   }
+            set { _resolution = value;  }
         }
 
         public bool AddSpriteToRenderList(ISprite Sprite)
@@ -94,12 +106,23 @@ namespace NEG_Engine.Managers.Graphics
         {
             // Initialize the list
             _renderList     = new List<ISprite>();
-            _spriteLoader   = new SpriteLoader();            
+            _spriteLoader   = new SpriteLoader();
+            _camera         = new BasicCamera(this);
         }
 
         public void Tick(long Ticks)
         {
-            throw new NotImplementedException();
+            _videoRender.NextFrame();       // Start the next frame            
+
+            foreach (ISprite sprite in _renderList) // Loop every Sprite
+            {
+                if (_camera.SpriteIsInFrame(sprite))    // if the sprite is inside the camera frame, render it
+                    _videoRender.DrawBitmap
+                        (
+                            sprite.Sprite, 
+                            _camera.GetCameraRelativeCoords(sprite)
+                        );                                              // Draw the sprite on screen
+            }
         }
 
         // Internal Methods

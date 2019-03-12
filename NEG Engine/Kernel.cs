@@ -13,6 +13,7 @@ using NEG_Engine.WavPlayer;
 using NEG_Engine.Loader.Wav;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Managers;
+using NEG_Engine.Managers.Graphics;
 
 namespace NEG_Engine
 {
@@ -27,9 +28,7 @@ namespace NEG_Engine
         protected   IManagerAdmin       _managerAdmin       = null;                     // The admin of all the managers
 
         // DEBUG STUFF
-        // TODO Move them to proper classes, to decluter Kernel
-        protected IRender           _gameRender     = null;     // The game render
-        protected ISpriteLoader     _spriteLoader   = null;     // The sprite loader        
+        // TODO Move them to proper classes, to decluter Kernel   
         protected IWavLoader        _wavLoader      = null;     // THe sound loader
 
         // Constructor
@@ -37,7 +36,6 @@ namespace NEG_Engine
         {
             this._gameWindow = F;                                                           // Assign the game window wo the proper variable            
 
-            _gameRender = new BasicRender(_gameWindow, new Point(800, 600));                // Choose the game Window size
             _managerAdmin = new BasicManagerAdmin();                                        // Instantiate the Admin Manager
 
             // Calls the setup function of the kernel
@@ -54,14 +52,22 @@ namespace NEG_Engine
 
             ((IManager) _managerAdmin).Start(_managerAdmin);    // Cast the Admin Manager to a IManager and run the Start() method
 
+            //----- Add Managers here -------
+            _managerAdmin.AddToManagerList(new GraphicsManager(_gameWindow, new Point(1600, 900)));
+
+            //----- End of Managers adding ----
+
+
+            // Setup all of the Managers
+            ((IManager)_managerAdmin).Start(_managerAdmin);
+            
+
             // DEBUG
             // Initialize and start the Sprite Loader
             // TODO Get rid of everything between the lines
             // ---------------------------START-----------------------------------------------------------------------------------|
-            _spriteLoader   = new SpriteLoader();
             _wavLoader      = new WavLoader();
 
-            ((Loader.IFileLoader) _spriteLoader).LoadFilesFromFolder("Bitmaps/", "*.bmp");
             ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");           
 
 
