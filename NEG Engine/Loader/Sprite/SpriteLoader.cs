@@ -10,6 +10,13 @@ namespace NEG_Engine.Loader.Sprite
 {
     class SpriteLoader : FileLoader<Bitmap>, ISpriteLoader, IFileLoader
     {
+        // Constructor
+        public SpriteLoader ()
+        {
+            LoadFilesFromFolder("Bitmaps/", "*.bmp");       // Load all the .bmp files from the Bitmaps/ folder
+        }
+
+
         // Returns a bitmap using the provided Index
         public Bitmap GetBitmap(int Index)
         {

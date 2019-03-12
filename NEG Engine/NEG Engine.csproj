@@ -50,6 +50,8 @@
     <Compile Include="Loader\Sprite\SpriteLoader.cs" />
     <Compile Include="Loader\Wav\IWavLoader.cs" />
     <Compile Include="Loader\Wav\WavLoader.cs" />
+    <Compile Include="Managers\Graphics\GraphicsManager.cs" />
+    <Compile Include="Managers\Graphics\IGraphicsManager.cs" />
     <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\ManagerAdmin\BasicManagerAdmin.cs" />
     <Compile Include="Managers\ManagerAdmin\IManagerAdmin.cs" />
@@ -87,7 +89,6 @@
   <ItemGroup>
     <Folder Include="Managers\Collision\" />
     <Folder Include="Managers\Entity\" />
-    <Folder Include="Managers\Graphics\" />
     <Folder Include="Managers\Mind\" />
     <Folder Include="Managers\Sound\" />
   </ItemGroup>

@@ -31,6 +31,8 @@ namespace NEG_Engine.Sprites
         }        
 
         // Interface Methods
+
+        // Getters and Setters for days 
         public Bitmap Sprite
         {
             get { return _sprite;       }
