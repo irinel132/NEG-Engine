@@ -24,7 +24,8 @@ namespace NEG_Engine.Managers.Graphics
         protected   ICamera             _camera             = null;         // The game camera
 
         protected   Point               _resolution;                        // The render resolution
-        
+
+
         // Constructor
         public GraphicsManager(Form Form, Point Resolution)
         {
@@ -128,3 +129,4 @@ namespace NEG_Engine.Managers.Graphics
         // Internal Methods
     }
 }
+
