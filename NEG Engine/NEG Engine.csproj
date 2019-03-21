@@ -50,6 +50,11 @@
     <Compile Include="Loader\Sprite\SpriteLoader.cs" />
     <Compile Include="Loader\Wav\IWavLoader.cs" />
     <Compile Include="Loader\Wav\WavLoader.cs" />
+    <Compile Include="Managers\Graphics\Camera\AbstractCamera.cs" />
+    <Compile Include="Managers\Graphics\Camera\BasicCamera.cs" />
+    <Compile Include="Managers\Graphics\Camera\ICamera.cs" />
+    <Compile Include="Managers\Graphics\GraphicsManager.cs" />
+    <Compile Include="Managers\Graphics\IGraphicsManager.cs" />
     <Compile Include="Managers\IManager.cs" />
     <Compile Include="Managers\ManagerAdmin\BasicManagerAdmin.cs" />
     <Compile Include="Managers\ManagerAdmin\IManagerAdmin.cs" />
@@ -63,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sprites\AbstractSprite.cs" />
     <Compile Include="Sprites\ISprite.cs" />
+    <Compile Include="Sprites\TestSprite.cs" />
     <Compile Include="WavPlayer\BasicWavPlayer.cs" />
     <Compile Include="WavPlayer\IWavPlayer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -87,9 +93,10 @@
   <ItemGroup>
     <Folder Include="Managers\Collision\" />
     <Folder Include="Managers\Entity\" />
-    <Folder Include="Managers\Graphics\" />
+    <Folder Include="Managers\Factory\" />
     <Folder Include="Managers\Mind\" />
     <Folder Include="Managers\Sound\" />
+    <Folder Include="Sprites\Factory\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bitmaps\Dick.bmp">

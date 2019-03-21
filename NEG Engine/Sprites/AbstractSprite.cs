@@ -31,6 +31,8 @@ namespace NEG_Engine.Sprites
         }        
 
         // Interface Methods
+
+        // Getters and Setters for days 
         public Bitmap Sprite
         {
             get { return _sprite;       }
@@ -43,8 +45,8 @@ namespace NEG_Engine.Sprites
         }
         public Point Position
         {
-            get { return _position;     }
-            set { _position = value;    }
+            get { return getActualPosition();       }
+            set { _position = value;                }
         }
         public float Rotation
         {
@@ -59,5 +61,15 @@ namespace NEG_Engine.Sprites
 
 
         // Methods
+        protected Point getActualPosition()
+        {
+            int x = _position.X,    // Get the X and Y coordinates
+                y = _position.Y;
+
+            x   -= _sprite.Width;   // Substract half of the sprite size in both X and Y.
+            y   -= _sprite.Height;
+
+            return new Point(x, y);
+        }
     }
 }
