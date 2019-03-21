@@ -19,6 +19,11 @@ namespace NEG_Engine
 
         }
 
+        public static Kernel EngineStar()
+        {
+            return EngineStart(Color.Purple, Screen.PrimaryScreen.Bounds, false);
+        }
+
         public static Kernel EngineStart(Color BackColor, Rectangle Bounds, bool TopMost)
         {
             Form gameWindow = new Form();
