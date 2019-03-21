@@ -120,7 +120,7 @@ namespace NEG_Engine.Managers.Graphics
                 if (_camera.SpriteIsInFrame(sprite))    // if the sprite is inside the camera frame, render it
                     _videoRender.DrawBitmap
                         (
-                            sprite.Sprite, 
+                            _spriteLoader.GetBitmap(sprite.Sprite), 
                             _camera.GetCameraRelativeCoords(sprite)
                         );                                              // Draw the sprite on screen
             }

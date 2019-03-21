@@ -7,7 +7,7 @@ using System.Text;
 namespace NEG_Engine.Factories.Sprite
 {
     class SpriteFactory : AbstractFactory<ISprite>
-    {
-        
+    {        
+
     }
 }

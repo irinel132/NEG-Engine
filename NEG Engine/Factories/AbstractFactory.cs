@@ -12,6 +12,7 @@ namespace NEG_Engine.Factories
         static readonly Dictionary<int, Func<T>> _newInstances
              = new Dictionary<int, Func<T>>();      // Holds a list of new entities
 
+        // Actually stores a constructor for a class and registers it to the id.
         public static T Create(int id)
         {
             Func<T> constructor = null;
