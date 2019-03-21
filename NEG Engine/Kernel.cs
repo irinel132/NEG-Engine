@@ -78,8 +78,6 @@ namespace NEG_Engine
         public void Tick (long Ticks)
         {
             ((IManager)_managerAdmin).Tick(Ticks);          // Cast the admin manager to IManager and run Tick()
-
-            Factories.Sprite.SpriteFactory.GetNewSprite(() => new Sprites.TestSprite((int) Ticks % 2, new Point((int) Ticks + 256, (int) Ticks + 256), new Point(0, 0), false, 0));
         }
 
 
