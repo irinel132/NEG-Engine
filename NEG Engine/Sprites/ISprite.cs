@@ -8,7 +8,7 @@ namespace NEG_Engine.Sprites
 {
     interface ISprite
     {
-        Bitmap      Sprite          { get; set; }               // The Bitmap of the sprite
+        int         Sprite          { get; set; }               // The int of the sprite
 
         Point       Scale           { get; set; }               // Scale in X and Y coordinates. 100 is standard
         Point       Position        { get; set; }               // The in engine position of the sprite
