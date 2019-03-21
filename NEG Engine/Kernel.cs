@@ -25,7 +25,7 @@ namespace NEG_Engine
         protected   Form                _gameWindow         = null;                     // The window of the game. Used for drawing
         protected   IGameThread         _gameThread         = null;                     // The game thread
 
-        protected   IManagerAdmin       _managerAdmin       = null;                     // The admin of all the managers
+        public      IManagerAdmin       _managerAdmin       = null;                     // The admin of all the managers
 
         // DEBUG STUFF
         // TODO Move them to proper classes, to decluter Kernel   
