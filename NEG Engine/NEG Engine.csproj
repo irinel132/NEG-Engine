@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\AbstractFactory.cs" />
+    <Compile Include="Factories\Sprite\SpriteFactory.cs" />
     <Compile Include="Loader\FileLoader.cs" />
     <Compile Include="Loader\IFileLoader.cs" />
     <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
@@ -98,10 +100,10 @@
     <Folder Include="Managers\Sound\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bitmaps\Dick.bmp">
+    <Content Include="Bitmaps\0.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\hearth.bmp">
+    <Content Include="Bitmaps\1.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Wavs\piano2.wav">

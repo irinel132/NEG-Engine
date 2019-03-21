@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NEG_Engine.Factories.Sprite;
 using NEG_Engine.Loader.Sprite;
 using NEG_Engine.Managers.Graphics.Camera;
 using NEG_Engine.Managers.ManagerAdmin;
@@ -31,6 +32,8 @@ namespace NEG_Engine.Managers.Graphics
         {
             _resolution     = Resolution;                           // Save the resolution
             _videoRender    = new BasicRender  (Form, Resolution);  // Initialize the Video Renderer
+
+            SpriteFactory.SetGraphicsManager(this);                 // Register the manager to the sprite factory
         }
 
         
