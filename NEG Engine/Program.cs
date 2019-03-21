@@ -15,20 +15,26 @@ namespace NEG_Engine
         [STAThread]
         static void Main()
         {
+            EngineStart(Color.Purple, Screen.PrimaryScreen.Bounds, false);
+
+        }
+
+        public static Kernel EngineStart(Color BackColor, Rectangle Bounds, bool TopMost)
+        {
             Form gameWindow = new Form();
 
-            gameWindow.BackColor        = Color.White;
-            gameWindow.FormBorderStyle  = FormBorderStyle.None;
-            gameWindow.Bounds           = Screen.PrimaryScreen.Bounds;
-            gameWindow.TopMost          = false;
+            gameWindow.BackColor = BackColor;
+            gameWindow.FormBorderStyle = FormBorderStyle.None;
+            gameWindow.Bounds = Bounds;
+            gameWindow.TopMost = TopMost;
 
             Application.EnableVisualStyles();
-            new Kernel(gameWindow);
+            Kernel NEGEngine = new Kernel(gameWindow);
             Application.Run(gameWindow);
 
-            
 
-            
+            return NEGEngine;
         }
+}
     }
 }

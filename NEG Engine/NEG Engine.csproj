@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\AbstractFactory.cs" />
+    <Compile Include="Factories\Sprite\SpriteFactory.cs" />
     <Compile Include="Loader\FileLoader.cs" />
     <Compile Include="Loader\IFileLoader.cs" />
     <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
@@ -96,7 +98,6 @@
     <Folder Include="Managers\Factory\" />
     <Folder Include="Managers\Mind\" />
     <Folder Include="Managers\Sound\" />
-    <Folder Include="Sprites\Factory\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bitmaps\Dick.bmp">
