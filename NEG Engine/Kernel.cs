@@ -74,11 +74,8 @@ namespace NEG_Engine
             // Initialize and start the Sprite Loader
             // TODO Get rid of everything between the lines
             // ---------------------------START-----------------------------------------------------------------------------------|
-            _wavLoader      = new WavLoader();
-
-            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
-        
-            
+           
+           /* 
             Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(256, 256));
 
 
@@ -90,6 +87,8 @@ namespace NEG_Engine
                     new Point(100, 100)
                 )
             );
+
+            */
 
             
 
