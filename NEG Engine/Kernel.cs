@@ -32,7 +32,8 @@ namespace NEG_Engine
         // Constructor
         public Kernel (Form F)
         {
-            this._gameWindow = F;                                                           // Assign the game window wo the proper variable            
+            this._gameWindow = F;                                                           // Assign the game window wo the proper variable          
+            InputHandler.Instance.SetGameWindow(ref F);
 
             _managerAdmin = new BasicManagerAdmin();                                        // Instantiate the Admin Manager
 

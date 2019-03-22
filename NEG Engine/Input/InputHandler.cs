@@ -50,7 +50,7 @@ namespace NEG_Engine.Input
             _gameWindow = GameWindow;
         }
 
-        public void SubscribeToListener(IInputListener InputListener)
+        public void Subscribe(IInputListener InputListener)
         {
             _gameWindow.KeyPreview = true;
 

@@ -1,14 +1,16 @@
 ﻿using NEG_Engine.Hitbox;
+using NEG_Engine.Input;
 using NEG_Engine.Sprites;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace NEG_Engine.Mind
 {
-    class TestMind : AbstractMind, IDisposable
+    class TestMind : AbstractMind, IDisposable, IInputListener
     {
         #region Variables
         protected           ISprite     _sprite     = null;
@@ -36,6 +38,8 @@ namespace NEG_Engine.Mind
                                                                                     _location,
                                                                                     new Point (256, 256)
                                                                                     ));
+
+            InputHandler.Instance.Subscribe(this);
         }
 
         public void Dispose()
@@ -47,11 +51,27 @@ namespace NEG_Engine.Mind
 
         public override void Tick(long Tick)
         {
-            _location.X += _speed.X;
-            _location.Y += _speed.Y;
-
             _sprite.Position    = _location;
             _hitbox.Origin      = _location;
+        }
+
+        public void KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    _location.Y -= _speed.Y;
+                    break;
+                case Keys.S:
+                    _location.Y += _speed.Y;
+                    break;
+                case Keys.A:
+                    _location.X -= _speed.X;
+                    break;
+                case Keys.D:
+                    _location.X += _speed.X;
+                    break;
+            }
         }
 
         #endregion

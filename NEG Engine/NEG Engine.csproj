@@ -53,6 +53,8 @@
     <Compile Include="Hitbox\AbstractHitbox.cs" />
     <Compile Include="Hitbox\IHitbox.cs" />
     <Compile Include="Hitbox\TestTrigger.cs" />
+    <Compile Include="Input\InputHandler.cs" />
+    <Compile Include="Input\IInputListener.cs" />
     <Compile Include="Loader\FileLoader.cs" />
     <Compile Include="Loader\IFileLoader.cs" />
     <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
@@ -108,11 +110,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Managers\Entity\" />
-    <Folder Include="Managers\Factory\" />
-    <Folder Include="Managers\Sound\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Bitmaps\0.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
