@@ -47,6 +47,8 @@
     <Compile Include="Factories\AbstractFactory.cs" />
     <Compile Include="Factories\Mind\MindFactory.cs" />
     <Compile Include="Factories\Sprite\SpriteFactory.cs" />
+    <Compile Include="Hitbox\AbstractHitbox.cs" />
+    <Compile Include="Hitbox\IHitbox.cs" />
     <Compile Include="Loader\FileLoader.cs" />
     <Compile Include="Loader\IFileLoader.cs" />
     <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
