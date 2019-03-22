@@ -72,7 +72,7 @@ namespace NEG_Engine
 
             ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
 
-            Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(250, 250));
+            //Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(250, 250));
 
 
             //-----------------------------END------------------------------------------------------------------------------------|
