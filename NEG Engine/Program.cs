@@ -40,6 +40,6 @@ namespace NEG_Engine
 
             return NEGEngine;
         }
-}
     }
 }
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NEG_Engine.Managers.Mind;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,5 +8,9 @@ namespace NEG_Engine.Mind
 {
     interface IMind
     {
+        void Setup(IMindManager MindManager);
+        void Tick(long Tick);       
+
+        string GetMindTag();
     }
 }

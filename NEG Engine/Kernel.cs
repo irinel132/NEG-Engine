@@ -14,6 +14,7 @@ using NEG_Engine.Loader.Wav;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Managers;
 using NEG_Engine.Managers.Graphics;
+using NEG_Engine.Managers.Mind;
 
 namespace NEG_Engine
 {
@@ -54,6 +55,7 @@ namespace NEG_Engine
 
             //----- Add Managers here -------
             _managerAdmin.AddToManagerList(new GraphicsManager(_gameWindow, new Point(1600, 900)));
+            _managerAdmin.AddToManagerList(new MindManager());
 
             //----- End of Managers adding ----
 
@@ -68,7 +70,9 @@ namespace NEG_Engine
             // ---------------------------START-----------------------------------------------------------------------------------|
             _wavLoader      = new WavLoader();
 
-            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");           
+            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
+
+            Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(250, 250));
 
 
             //-----------------------------END------------------------------------------------------------------------------------|
