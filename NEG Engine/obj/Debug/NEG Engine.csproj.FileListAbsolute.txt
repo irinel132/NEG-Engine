@@ -17,11 +17,6 @@ C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Wavs\piano2.wav
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\0.bmp
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\1.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\10.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\11.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\12.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\13.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\14.bmp
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\2.bmp
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\3.bmp
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\4.bmp
@@ -30,3 +25,8 @@ C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bit
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\7.bmp
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\8.bmp
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\9.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\a.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\b.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\c.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\d.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\e.bmp

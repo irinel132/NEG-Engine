@@ -29,7 +29,7 @@ namespace NEG_Engine.Factories.Sprite
             ISprite sprite = Create(_index++);
 
             // Add the sprite to the graphics manager
-            _graphicsManager.AddSpriteToRenderList(sprite);
+            _graphicsManager.AddSpriteToRenderList(sprite);            
 
             // Also return
             return sprite;

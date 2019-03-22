@@ -26,6 +26,7 @@ namespace NEG_Engine.Loader
             {
                 LoadFile(path);
             }
+            
         }
     }
 }

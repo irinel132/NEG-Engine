@@ -5,11 +5,11 @@ using System.Text;
 
 namespace NEG_Engine.Factories
 {
-    public class AbstractFactory<T>
+    class AbstractFactory<T>
     {
         protected AbstractFactory() { }
 
-        static readonly Dictionary<int, Func<T>> _newInstances
+        protected static Dictionary<int, Func<T>> _newInstances
              = new Dictionary<int, Func<T>>();      // Holds a list of new entities
 
         // Actually stores a constructor for a class and registers it to the id.

@@ -45,8 +45,8 @@ namespace NEG_Engine.Sprites
         }
         public Point Position
         {
-            get { return getActualPosition();       }
-            set { _position = value;                }
+            get { return _position;     }
+            set { _position = value;    }
         }
         public float Rotation
         {
@@ -59,15 +59,5 @@ namespace NEG_Engine.Sprites
             set { _flipped = value;     }
         }
 
-
-        // Methods
-        protected Point getActualPosition()
-        {
-            return new Point
-                (
-                    _position.X - 256,
-                    _position.Y - 256
-                );
-        }
     }
 }

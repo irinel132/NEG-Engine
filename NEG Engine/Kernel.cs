@@ -68,13 +68,13 @@ namespace NEG_Engine
 
             // Setup all of the Managers
             ((IManager)_managerAdmin).Start(_managerAdmin);
-            
+
 
             // DEBUG
             // Initialize and start the Sprite Loader
             // TODO Get rid of everything between the lines
-            // ---------------------------START-----------------------------------------------------------------------------------|
-           
+            // ---------------------------START-----------------------------------------------------------------------------------|            
+
             /*
             Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(256, 256));
 
@@ -87,13 +87,17 @@ namespace NEG_Engine
                     new Point(100, 100)
                 )
             );
-            */
-            
 
-            
+            */
+
+
+
+
 
 
             //-----------------------------END------------------------------------------------------------------------------------|
+            
+            new Game.Game(this);
         }
 
 

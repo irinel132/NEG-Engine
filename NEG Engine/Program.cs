@@ -35,7 +35,7 @@ namespace NEG_Engine
 
             Application.EnableVisualStyles();
             Kernel NEGEngine = new Kernel(gameWindow);
-            Application.Run(gameWindow);
+            Application.Run(gameWindow);            
 
 
             return NEGEngine;
