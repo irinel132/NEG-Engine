@@ -9,5 +9,6 @@ namespace NEG_Engine.Input
     interface IInputListener
     {        
         void KeyDown(object sender, KeyEventArgs e);
+        void KeyUp(object sender, KeyEventArgs e);
     }
 }

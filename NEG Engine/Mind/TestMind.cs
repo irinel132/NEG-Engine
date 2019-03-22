@@ -63,6 +63,11 @@ namespace NEG_Engine.Mind
             if (e.KeyCode.Equals(Keys.D)) { _location.X += _speed.X; }
         }
 
+        public void KeyUp(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
     }
 }

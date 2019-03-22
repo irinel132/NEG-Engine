@@ -15,18 +15,17 @@ C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.pdb
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\obj\Debug\NEG Engine.csprojAssemblyReference.cache
 C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Wavs\piano2.wav
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\0.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\1.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\2.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\3.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\4.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\5.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\6.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\7.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\8.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\9.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\a.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\b.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\c.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\d.bmp
-C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\e.bmp
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\0.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\1.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\a.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\b.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\c.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\d.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\2.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\3.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\4.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\5.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\6.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\7.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\8.png
+C:\Users\irine\Desktop\NEG Engine\NEG Engine\NEG-Engine\NEG Engine\bin\Debug\Bitmaps\9.png

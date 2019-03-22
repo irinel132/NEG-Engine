@@ -13,7 +13,7 @@ namespace NEG_Engine.Loader.Sprite
         // Constructor
         public SpriteLoader ()
         {
-            LoadFilesFromFolder("Bitmaps/", "*.bmp");       // Load all the .bmp files from the Bitmaps/ folder
+            LoadFilesFromFolder("Bitmaps/", "*.png");       // Load all the .bmp files from the Bitmaps/ folder
         }
 
 

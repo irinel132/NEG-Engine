@@ -21,6 +21,11 @@ namespace NEG_Engine.Factories.Hitbox
             _collisionManager = CollisionManager;
         }
 
+        public static void RegisterHitbox (IHitbox Hitbox)
+        {
+            _collisionManager.AddHitboxToList(Hitbox);
+        }
+
         public static IHitbox GetHitbox(Func<IHitbox> NewHitbox)
         {
             if (_collisionManager == null) { return null; }

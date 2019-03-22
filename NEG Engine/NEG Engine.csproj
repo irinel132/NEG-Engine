@@ -66,6 +66,8 @@
     <Compile Include="Factories\QuadTree\QuadTreeFactory.cs" />
     <Compile Include="Factories\Sprite\SpriteFactory.cs" />
     <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\Obstacle.cs" />
+    <Compile Include="Game\Player.cs" />
     <Compile Include="Hitbox\AbstractHitbox.cs" />
     <Compile Include="Hitbox\IHitbox.cs" />
     <Compile Include="Hitbox\TestTrigger.cs" />
@@ -130,49 +132,47 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bitmaps\0.bmp">
+    <Content Include="Bitmaps\0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\1.bmp">
+    <Content Include="Bitmaps\1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\a.bmp">
+    <Content Include="Bitmaps\1.txt" />
+    <Content Include="Bitmaps\a.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\b.bmp">
+    <Content Include="Bitmaps\b.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\c.bmp">
+    <Content Include="Bitmaps\c.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\d.bmp">
+    <Content Include="Bitmaps\d.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\e.bmp">
+    <Content Include="Bitmaps\2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\2.bmp">
+    <Content Include="Bitmaps\3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\3.bmp">
+    <Content Include="Bitmaps\4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\4.bmp">
+    <Content Include="Bitmaps\5.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\5.bmp">
+    <Content Include="Bitmaps\6.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\6.bmp">
+    <Content Include="Bitmaps\7.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\7.bmp">
+    <Content Include="Bitmaps\8.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Bitmaps\8.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Bitmaps\9.bmp">
+    <Content Include="Bitmaps\9.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Wavs\piano2.wav">

@@ -12,6 +12,7 @@ namespace NEG_Engine.Input
         protected   Form                    _gameWindow         = null;                     // The window of the game. Used for keyboard input
         protected   List<IInputListener>    _inputListeners     = null;
 
+
         #endregion
 
         InputHandler()
@@ -55,7 +56,9 @@ namespace NEG_Engine.Input
             _gameWindow.KeyPreview = true;
 
             _gameWindow.KeyDown += InputListener.KeyDown;
+            _gameWindow.KeyUp   += InputListener.KeyUp;
         }
+
         #endregion
     }
 }
