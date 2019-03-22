@@ -11,6 +11,7 @@ using NEG_Engine.Loader.Wav;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Managers;
 using NEG_Engine.Factories.Manager;
+using NEG_Engine.Input;
 
 namespace NEG_Engine
 {
@@ -31,7 +32,8 @@ namespace NEG_Engine
         // Constructor
         public Kernel (Form F)
         {
-            this._gameWindow = F;                                                           // Assign the game window wo the proper variable            
+            this._gameWindow = F;                                                           // Assign the game window wo the proper variable          
+            InputHandler.Instance.SetGameWindow(ref F);
 
             _managerAdmin = new BasicManagerAdmin();                                        // Instantiate the Admin Manager
 
@@ -46,7 +48,6 @@ namespace NEG_Engine
         // Methods
         protected void Setup()
         {
-            
             //----- Add Managers here -------
             ManagerFactory.GetManager
             (
@@ -73,11 +74,8 @@ namespace NEG_Engine
             // Initialize and start the Sprite Loader
             // TODO Get rid of everything between the lines
             // ---------------------------START-----------------------------------------------------------------------------------|
-            _wavLoader      = new WavLoader();
-
-            ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
-
-            /*
+           
+           /* 
             Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(256, 256));
 
 
@@ -91,6 +89,8 @@ namespace NEG_Engine
             );
 
             */
+
+            
 
 
             //-----------------------------END------------------------------------------------------------------------------------|
