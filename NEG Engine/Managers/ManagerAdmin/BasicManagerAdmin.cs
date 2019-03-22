@@ -14,6 +14,8 @@ namespace NEG_Engine.Managers.ManagerAdmin
         public BasicManagerAdmin ()
         {
             _managerList = new List<IManager>();                        // Instantiate the list
+
+            Factories.Manager.ManagerFactory.SetManagerAdmin(this);
         }
 
         // Interface methods

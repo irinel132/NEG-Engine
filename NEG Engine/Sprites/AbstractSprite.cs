@@ -63,13 +63,11 @@ namespace NEG_Engine.Sprites
         // Methods
         protected Point getActualPosition()
         {
-            int x = _position.X,    // Get the X and Y coordinates
-                y = _position.Y;
-
-            x   -=  256; // 512 / 2
-            y   -=  256;
-
-            return new Point(x, y);
+            return new Point
+                (
+                    _position.X - 256,
+                    _position.Y - 256
+                );
         }
     }
 }

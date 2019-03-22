@@ -6,15 +6,11 @@ using System.Windows.Forms;
 using System.Threading;
 
 using NEG_Engine.GThread;
-using NEG_Engine.Render;
 using System.Drawing;
-using NEG_Engine.Loader.Sprite;
-using NEG_Engine.WavPlayer;
 using NEG_Engine.Loader.Wav;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Managers;
-using NEG_Engine.Managers.Graphics;
-using NEG_Engine.Managers.Mind;
+using NEG_Engine.Factories.Manager;
 
 namespace NEG_Engine
 {
@@ -50,12 +46,21 @@ namespace NEG_Engine
         // Methods
         protected void Setup()
         {
-
-            ((IManager) _managerAdmin).Start(_managerAdmin);    // Cast the Admin Manager to a IManager and run the Start() method
-
+            
             //----- Add Managers here -------
-            _managerAdmin.AddToManagerList(new GraphicsManager(_gameWindow, new Point(1600, 900)));
-            _managerAdmin.AddToManagerList(new MindManager());
+            ManagerFactory.GetManager
+            (
+                () => new Managers.Graphics.GraphicsManager   (_gameWindow, new Point(1600, 900))     
+            );
+            ManagerFactory.GetManager
+            (
+                () => new Managers.Mind.MindManager           ()                                      
+            );
+            ManagerFactory.GetManager
+            (
+                () => new Managers.Collision.CollisionManager()
+            );
+
 
             //----- End of Managers adding ----
 
@@ -72,7 +77,20 @@ namespace NEG_Engine
 
             ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
 
-            //Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(250, 250));
+            /*
+            Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(256, 256));
+
+
+            Factories.Hitbox.HitboxFactory.GetHitbox
+            (
+                () => new Hitbox.TestTrigger
+                (
+                    new Point(1000, 1000),
+                    new Point(100, 100)
+                )
+            );
+
+            */
 
 
             //-----------------------------END------------------------------------------------------------------------------------|
