@@ -30,13 +30,13 @@ namespace NEG_Engine.Mind
             _sprite = Factories.Sprite.SpriteFactory.GetNewSprite(() => new TestSprite(
                                                                                     1,
                                                                                     _location,
-                                                                                    new Point(1, 1),
-                                                                                    false,
+                                                                                    .25f,
+                                                                                    true,
                                                                                     0
                                                                                     ));
             _hitbox = Factories.Hitbox.HitboxFactory.GetHitbox(() => new TestTrigger(
                                                                                     _location,
-                                                                                    new Point (256, 256)
+                                                                                    new Point ((int) (256 * .25f), (int) (256 * .25f))
                                                                                     ));
 
             InputHandler.Instance.Subscribe(this);
@@ -57,21 +57,10 @@ namespace NEG_Engine.Mind
 
         public void KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.W:
-                    _location.Y -= _speed.Y;
-                    break;
-                case Keys.S:
-                    _location.Y += _speed.Y;
-                    break;
-                case Keys.A:
-                    _location.X -= _speed.X;
-                    break;
-                case Keys.D:
-                    _location.X += _speed.X;
-                    break;
-            }
+            if (e.KeyCode.Equals(Keys.W)) { _location.Y -= _speed.Y; }
+            if (e.KeyCode.Equals(Keys.S)) { _location.Y += _speed.Y; }
+            if (e.KeyCode.Equals(Keys.A)) { _location.X -= _speed.X; }
+            if (e.KeyCode.Equals(Keys.D)) { _location.X += _speed.X; }
         }
 
         #endregion

@@ -38,6 +38,22 @@ namespace NEG_Engine.Render
         }
 
         // Methods
+        public void DrawBitmap(Bitmap BMP, Point Position, float Scale, bool Flipped)
+        {
+            Bitmap tempBmp = (Bitmap) BMP.Clone();
+            if (Flipped)
+                tempBmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+            _nextFrameGraphics.DrawImage
+            (
+                tempBmp,
+                Position.X,
+                Position.Y,
+                BMP.Width * Scale,
+                BMP.Height * Scale
+            );
+        }
+
         public void DrawBitmap(Bitmap BMP, Point Position)
         {
             _nextFrameGraphics.DrawImage(BMP, Position);

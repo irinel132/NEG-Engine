@@ -124,7 +124,9 @@ namespace NEG_Engine.Managers.Graphics
                     _videoRender.DrawBitmap
                         (
                             _spriteLoader.GetBitmap(sprite.Sprite), 
-                            _camera.GetCameraRelativeCoords(sprite)
+                            _camera.GetCameraRelativeCoords(sprite),
+                            sprite.Scale,
+                            sprite.Flipped
                         );                                              // Draw the sprite on screen
             }
         }

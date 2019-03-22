@@ -75,7 +75,7 @@ namespace NEG_Engine
             // TODO Get rid of everything between the lines
             // ---------------------------START-----------------------------------------------------------------------------------|
            
-           /* 
+            /*
             Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(256, 256));
 
 
@@ -87,8 +87,8 @@ namespace NEG_Engine
                     new Point(100, 100)
                 )
             );
-
             */
+            
 
             
 

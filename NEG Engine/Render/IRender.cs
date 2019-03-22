@@ -10,6 +10,7 @@ namespace NEG_Engine.Render
     {
         void DrawBitmap (Bitmap BMP, Point Position);
         void DrawBitmap (Bitmap BMP, int X, int Y);
+        void DrawBitmap(Bitmap BMP, Point Position, float Scale, bool Flipped);
 
         void NextFrame ();
     }

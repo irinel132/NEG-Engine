@@ -8,7 +8,7 @@ namespace NEG_Engine.Sprites
 {
     class TestSprite : AbstractSprite
     {
-        public TestSprite(int Sprite, Point Position, Point Scale, bool Flipped, float Rotation) : base(Sprite, Position, Scale, Flipped, Rotation)
+        public TestSprite(int Sprite, Point Position, float Scale, bool Flipped, float Rotation) : base(Sprite, Position, Scale, Flipped, Rotation)
         {
         }
     }
