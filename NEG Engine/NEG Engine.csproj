@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\AbstractFactory.cs" />
+    <Compile Include="Factories\Mind\MindFactory.cs" />
     <Compile Include="Factories\Sprite\SpriteFactory.cs" />
     <Compile Include="Loader\FileLoader.cs" />
     <Compile Include="Loader\IFileLoader.cs" />
@@ -61,6 +62,11 @@
     <Compile Include="Managers\ManagerAdmin\BasicManagerAdmin.cs" />
     <Compile Include="Managers\ManagerAdmin\IManagerAdmin.cs" />
     <Compile Include="Managers\AbstractManager.cs" />
+    <Compile Include="Managers\Mind\IMindManager.cs" />
+    <Compile Include="Managers\Mind\MindManager.cs" />
+    <Compile Include="Mind\AbstractMind.cs" />
+    <Compile Include="Mind\IMind.cs" />
+    <Compile Include="Mind\TestMind.cs" />
     <Compile Include="Render\BasicRender.cs" />
     <Compile Include="Render\IRender.cs" />
     <Compile Include="GThread\GameThread.cs" />
@@ -96,7 +102,6 @@
     <Folder Include="Managers\Collision\" />
     <Folder Include="Managers\Entity\" />
     <Folder Include="Managers\Factory\" />
-    <Folder Include="Managers\Mind\" />
     <Folder Include="Managers\Sound\" />
   </ItemGroup>
   <ItemGroup>
