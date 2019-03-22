@@ -45,14 +45,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\AbstractFactory.cs" />
+    <Compile Include="Factories\Hitbox\HitboxFactory.cs" />
+    <Compile Include="Factories\Manager\ManagerFactory.cs" />
     <Compile Include="Factories\Mind\MindFactory.cs" />
+    <Compile Include="Factories\QuadTree\QuadTreeFactory.cs" />
     <Compile Include="Factories\Sprite\SpriteFactory.cs" />
+    <Compile Include="Hitbox\AbstractHitbox.cs" />
+    <Compile Include="Hitbox\IHitbox.cs" />
+    <Compile Include="Hitbox\TestTrigger.cs" />
     <Compile Include="Loader\FileLoader.cs" />
     <Compile Include="Loader\IFileLoader.cs" />
     <Compile Include="Loader\Sprite\ISpriteLoader.cs" />
     <Compile Include="Loader\Sprite\SpriteLoader.cs" />
     <Compile Include="Loader\Wav\IWavLoader.cs" />
     <Compile Include="Loader\Wav\WavLoader.cs" />
+    <Compile Include="Managers\Collision\CollisionManager.cs" />
+    <Compile Include="Managers\Collision\ICollisionManager.cs" />
+    <Compile Include="Managers\Collision\QuadTree\IQuadTree.cs" />
+    <Compile Include="Managers\Collision\QuadTree\BasicQuadTree.cs" />
     <Compile Include="Managers\Graphics\Camera\AbstractCamera.cs" />
     <Compile Include="Managers\Graphics\Camera\BasicCamera.cs" />
     <Compile Include="Managers\Graphics\Camera\ICamera.cs" />
@@ -99,7 +109,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Managers\Collision\" />
     <Folder Include="Managers\Entity\" />
     <Folder Include="Managers\Factory\" />
     <Folder Include="Managers\Sound\" />
