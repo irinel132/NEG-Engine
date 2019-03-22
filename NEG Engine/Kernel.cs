@@ -11,6 +11,7 @@ using NEG_Engine.Loader.Wav;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Managers;
 using NEG_Engine.Factories.Manager;
+using NEG_Engine.Input;
 
 namespace NEG_Engine
 {
@@ -46,7 +47,6 @@ namespace NEG_Engine
         // Methods
         protected void Setup()
         {
-            
             //----- Add Managers here -------
             ManagerFactory.GetManager
             (
@@ -76,8 +76,8 @@ namespace NEG_Engine
             _wavLoader      = new WavLoader();
 
             ((Loader.IFileLoader) _wavLoader)   .LoadFilesFromFolder("Wavs/", "*.wav");
-
-            /*
+        
+            
             Factories.Mind.MindFactory.GetNewMind(() => new Mind.TestMind(256, 256));
 
 
@@ -90,7 +90,7 @@ namespace NEG_Engine
                 )
             );
 
-            */
+            
 
 
             //-----------------------------END------------------------------------------------------------------------------------|
