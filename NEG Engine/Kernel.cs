@@ -50,7 +50,7 @@ namespace NEG_Engine
             //----- Add Managers here -------
             ManagerFactory.GetManager
             (
-                () => new Managers.Graphics.GraphicsManager   (_gameWindow, new Point(1600, 900))     
+                () => new Managers.Graphics.GraphicsManager   (_gameWindow, new Point (_gameWindow.DesktopBounds.Right, _gameWindow.DesktopBounds.Bottom))     
             );
             ManagerFactory.GetManager
             (
