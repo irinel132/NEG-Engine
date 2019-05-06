@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NEG_Engine.Factories.Mind;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Mind;
 
@@ -10,14 +11,15 @@ namespace NEG_Engine.Managers.Mind
     class MindManager : IMindManager, IManager, IDisposable
     {
         #region Variables
-        public static readonly string       MANAGER_TAG     = "MindManager";
+        public static readonly string MANAGER_TAG           = ClassTags.MANAGER_MIND;
+        public static           IMindFactory MIND_FACTORY   = null;
+
+
         protected   List<IMind>             _mindList       = null;         // The list of all the minds        
 
         #endregion
 
-        public MindManager()
-        {            
-        }
+        public MindManager() { }
 
         #region Inerited methods
 
@@ -59,6 +61,11 @@ namespace NEG_Engine.Managers.Mind
             return MANAGER_TAG;
         }
 
+        public IMindFactory GetMindFactory()
+        {
+            return MIND_FACTORY;
+        }
+
         public bool RemoveMindFromList(IMind Mind)
         {
             int initialCount = _mindList.Count;       // Check the size of the render list 
@@ -81,7 +88,7 @@ namespace NEG_Engine.Managers.Mind
         {
             _mindList = new List<IMind>();
 
-            Factories.Mind.MindFactory.SetMindManager(this);
+            MIND_FACTORY = new MindFactory(this);
         }
 
         public void Tick(long Ticks)

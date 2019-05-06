@@ -7,21 +7,21 @@ using System.Text;
 
 namespace NEG_Engine.Factories.Manager
 {
-    class ManagerFactory : AbstractFactory<IManager>
+    class ManagerFactory : AbstractFactory<IManager>, IManagerFactory
     {
         #region Variables
         //protected static  
-        protected static IManagerAdmin _managerAdmin = null;
-        protected static int _index = 0;
+        protected IManagerAdmin _managerAdmin = null;
+        protected int _index = 0;
         #endregion
 
         #region Methods
-        public static void SetManagerAdmin(IManagerAdmin ManagerAdmin)
+        public ManagerFactory (IManagerAdmin ManagerAdmin)
         {
             _managerAdmin = ManagerAdmin;
         }
 
-        public static IManager GetManager(Func<IManager> NewHitbox)
+        public IManager GetManager(Func<IManager> NewHitbox)
         {
             if (_managerAdmin == null) { return null; }
 

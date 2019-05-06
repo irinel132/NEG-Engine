@@ -7,7 +7,6 @@ using System.Threading;
 
 using NEG_Engine.GThread;
 using System.Drawing;
-using NEG_Engine.Loader.Wav;
 using NEG_Engine.Managers.ManagerAdmin;
 using NEG_Engine.Managers;
 using NEG_Engine.Factories.Manager;
@@ -27,7 +26,6 @@ namespace NEG_Engine
 
         // DEBUG STUFF
         // TODO Move them to proper classes, to decluter Kernel   
-        protected IWavLoader        _wavLoader      = null;     // THe sound loader
 
         // Constructor
         public Kernel (Form F)
@@ -49,18 +47,20 @@ namespace NEG_Engine
         protected void Setup()
         {
             //----- Add Managers here -------
-            ManagerFactory.GetManager
+            IManagerFactory mf = _managerAdmin.GetManagerFactory();
+
+            mf.GetManager
             (
                 () => new Managers.Graphics.GraphicsManager   (_gameWindow, new Point (_gameWindow.DesktopBounds.Right, _gameWindow.DesktopBounds.Bottom))     
             );
-            ManagerFactory.GetManager
+            mf.GetManager
             (
                 () => new Managers.Mind.MindManager           ()                                      
             );
-            ManagerFactory.GetManager
+            mf.GetManager
             (
                 () => new Managers.Collision.CollisionManager()
-            );
+            );            
 
 
             //----- End of Managers adding ----
@@ -95,9 +95,7 @@ namespace NEG_Engine
 
 
 
-            //-----------------------------END------------------------------------------------------------------------------------|
-            
-            new Game.Game(this);
+            //-----------------------------END------------------------------------------------------------------------------------|           
         }
 
 

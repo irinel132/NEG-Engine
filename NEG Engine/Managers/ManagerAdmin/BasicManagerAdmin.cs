@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NEG_Engine.Factories.Manager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ namespace NEG_Engine.Managers.ManagerAdmin
 {
     class BasicManagerAdmin : IManagerAdmin, IManager, IDisposable
     {
+        public static IManagerFactory MANAGER_FACTORY = null;
         // Internal variables
         protected   List<IManager>      _managerList        = null;     // Will hold all the managers
 
@@ -15,7 +17,7 @@ namespace NEG_Engine.Managers.ManagerAdmin
         {
             _managerList = new List<IManager>();                        // Instantiate the list
 
-            Factories.Manager.ManagerFactory.SetManagerAdmin(this);
+            MANAGER_FACTORY = new ManagerFactory(this);
         }
 
         // Interface methods
@@ -64,11 +66,16 @@ namespace NEG_Engine.Managers.ManagerAdmin
             return null;                                                            // If nothing was found, return a null object
         }
 
+        public IManagerFactory GetManagerFactory()
+        {
+            return MANAGER_FACTORY;
+        }
+
 
         // Return the ManagerTag of the class
         public string GetManagerTag()
         {
-            return "MANAGER_ADMIN";  // The tag for the manager
+            return ClassTags.MANAGER_ADMIN;  // The tag for the manager
         }
 
 

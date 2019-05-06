@@ -16,7 +16,8 @@ namespace NEG_Engine.Managers.Graphics
     class GraphicsManager : IGraphicsManager, IManager, IDisposable
     {
         // 
-        public static readonly string   MANAGER_TAG = "GraphicsManager";
+        public static readonly  string           MANAGER_TAG     = ClassTags.MANAGER_GRAPHICS;
+        public static           ISpriteFactory   SPRITE_FACTORY  = null;
 
         // Internal variables        
         protected   List<ISprite>       _renderList         = null;         // The list of sprites to be rendered
@@ -33,7 +34,7 @@ namespace NEG_Engine.Managers.Graphics
             _resolution     = Resolution;                           // Save the resolution
             _videoRender    = new BasicRender  (Form, Resolution);  // Initialize the Video Renderer
 
-            SpriteFactory.SetGraphicsManager(this);                 // Register the manager to the sprite factory
+            SPRITE_FACTORY = new SpriteFactory(this);                 // Register the manager to the sprite factory
         }
 
         

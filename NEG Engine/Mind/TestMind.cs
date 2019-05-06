@@ -1,4 +1,6 @@
-﻿using NEG_Engine.Hitbox;
+﻿using NEG_Engine.Factories.Hitbox;
+using NEG_Engine.Factories.Sprite;
+using NEG_Engine.Hitbox;
 using NEG_Engine.Input;
 using NEG_Engine.Sprites;
 using System;
@@ -21,20 +23,20 @@ namespace NEG_Engine.Mind
 
         #endregion
 
-        public TestMind (int X, int Y )
+        public TestMind (int X, int Y)
         {
             MIND_TAG = "TestMind";
 
             _location = new Point(X, Y);
 
-            _sprite = Factories.Sprite.SpriteFactory.GetNewSprite(() => new TestSprite(
+            _sprite = ((ISpriteFactory) _managerAdmin.GetManager(ClassTags.MANAGER_ADMIN)).GetNewSprite(() => new TestSprite(
                                                                                     1,
                                                                                     _location,
                                                                                     .25f,
                                                                                     true,
                                                                                     0
                                                                                     ));
-            _hitbox = Factories.Hitbox.HitboxFactory.GetHitbox(() => new TestTrigger(
+            _hitbox = ((IHitboxFactory)_managerAdmin.GetManager(ClassTags.MANAGER_GRAPHICS)).GetHitbox(() => new TestTrigger(
                                                                                     _location,
                                                                                     new Point ((int) (256 * .25f), (int) (256 * .25f))
                                                                                     ));

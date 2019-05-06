@@ -6,14 +6,19 @@ using System.Text;
 
 namespace NEG_Engine.Factories.QuadTree
 {
-    class QuadTreeFactory : AbstractFactory<IQuadTree>
+    class QuadTreeFactory : AbstractFactory<IQuadTree>, IQuadTreeFactory
     {
         #region Variables
-        protected static int _index = 0;
+        protected int _index = 0;
         #endregion
 
+        public QuadTreeFactory ()
+        {
+            _index = 0;
+        }
 
-        public static IQuadTree GetNewQuadTree(Func<IQuadTree> NewQuadTree)
+
+        public IQuadTree GetNewQuadTree(Func<IQuadTree> NewQuadTree)
         {
             Register(_index, NewQuadTree);
 

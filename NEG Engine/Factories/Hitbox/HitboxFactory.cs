@@ -7,26 +7,25 @@ using System.Text;
 
 namespace NEG_Engine.Factories.Hitbox
 {
-    class HitboxFactory : AbstractFactory<IHitbox>
+    class HitboxFactory : AbstractFactory<IHitbox>, IHitboxFactory
     {
         #region Variables
-        protected static ICollisionManager _collisionManager = null;
-
-        protected static int _index = 0;
+        protected ICollisionManager _collisionManager = null;
+        protected int _index = 0;
         #endregion
 
         #region Methods
-        public static void SetCollisionManager(ICollisionManager CollisionManager)
+        public HitboxFactory (ICollisionManager CollisionManager)
         {
             _collisionManager = CollisionManager;
         }
 
-        public static void RegisterHitbox (IHitbox Hitbox)
+        public void RegisterHitbox (IHitbox Hitbox)
         {
             _collisionManager.AddHitboxToList(Hitbox);
         }
 
-        public static IHitbox GetHitbox(Func<IHitbox> NewHitbox)
+        public IHitbox GetHitbox(Func<IHitbox> NewHitbox)
         {
             if (_collisionManager == null) { return null; }
 

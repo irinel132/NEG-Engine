@@ -11,9 +11,11 @@ namespace NEG_Engine.Managers.Collision.QuadTree
     class BasicQuadTree : IQuadTree, IDisposable
     {
         #region Variables
-        protected static readonly int MAX_NODES = 10;
+        protected static readonly int               MAX_NODES   = 10;        
 
         protected int _level = 0;
+
+        protected IQuadTreeFactory _quadFactory = null;
 
         protected List<IHitbox> _nodes  = null;
         protected IQuadTree[]   _leaves = null;
@@ -22,13 +24,14 @@ namespace NEG_Engine.Managers.Collision.QuadTree
 
         #endregion
 
-        public BasicQuadTree(Rectangle Area, int Level, IQuadTree Trunk)
+        public BasicQuadTree(Rectangle Area, int Level, IQuadTree Trunk, IQuadTreeFactory QuadFactory)
         {
             _area   = Area;
             _level  = Level;
             _trunk  = Trunk;
 
-            _nodes  = new List<IHitbox>();
+            _nodes          = new List<IHitbox>();
+            _quadFactory    = QuadFactory;
         }
 
         #region Inherited Methods
@@ -166,13 +169,14 @@ namespace NEG_Engine.Managers.Collision.QuadTree
 
         protected IQuadTree NewLeaf (int x, int y, int w, int h)
         {
-            return QuadTreeFactory.GetNewQuadTree
+            return _quadFactory.GetNewQuadTree
             (
                 () => new BasicQuadTree
                     (
                      new Rectangle(x, y, w, h),
                      _level + 1,
-                     this
+                     this,
+                     _quadFactory
                     )
             );
         }

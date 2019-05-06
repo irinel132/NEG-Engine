@@ -7,19 +7,19 @@ using System.Text;
 
 namespace NEG_Engine.Factories.Mind
 {
-    class MindFactory : AbstractFactory<IMind>
+    class MindFactory : AbstractFactory<IMind>, IMindFactory
     {
         #region Variables
-        protected static IMindManager   _mindManager    = null;
-        protected static int            _index          = 0;
+        protected  IMindManager   _mindManager    = null;
+        protected  int            _index          = 0;
         #endregion
 
-        public static void SetMindManager (IMindManager MindManager)
+        public MindFactory (IMindManager MindMngr)
         {
-            _mindManager = MindManager;
+            _mindManager = MindMngr;
         }
 
-        public static IMind GetNewMind(Func<IMind> NewMind)
+        public IMind GetNewMind(Func<IMind> NewMind)
         {
             if (_mindManager == null) { return null; }
 

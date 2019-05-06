@@ -7,17 +7,18 @@ using System.Text;
 
 namespace NEG_Engine.Factories.Sprite
 {
-    class SpriteFactory : AbstractFactory<ISprite>
+    class SpriteFactory : AbstractFactory<ISprite>, ISpriteFactory
     {
-        protected static IGraphicsManager _graphicsManager = null;
-        protected static int _index = 0;
+        protected IGraphicsManager  _graphicsManager = null;
+        protected int               _index ;
 
-        public static void SetGraphicsManager(IGraphicsManager GraphicsManager)
+        public SpriteFactory (IGraphicsManager GraphicsManager)
         {
-            _graphicsManager = GraphicsManager;
+            _graphicsManager    = GraphicsManager;
+            _index              = 0;
         }
 
-        public static ISprite GetNewSprite(Func<ISprite> NewSprite)
+        public ISprite GetNewSprite(Func<ISprite> NewSprite)
         {
             // If the graphics manager isn't set, return early
             if (_graphicsManager == null) { return null; }
